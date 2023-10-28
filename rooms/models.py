@@ -30,7 +30,7 @@ class Room(CoreModel):
 
 class Photo(CoreModel):
 
-    file = models.ImageField()
+    file = models.ImageField(default="1.webp")
     room = models.ForeignKey(
         "rooms.Room", related_name="photos", on_delete=models.CASCADE
     )

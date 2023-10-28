@@ -19,7 +19,7 @@ class Command(BaseCommand):
         room_seeder = Seed.seeder()
         room_seeder.add_entity(
             Room,
-            150,
+            500,
             {
                 "user": lambda x: random.choice(users),
                 "name": lambda x: room_seeder.faker.street_address(),
